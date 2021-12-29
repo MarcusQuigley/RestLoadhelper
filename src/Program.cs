@@ -25,13 +25,13 @@ var fireTimer = new Timer((o) =>
         aProcess.StartInfo = processInfo;
         aProcess.Start();
     }
-}, null, 20000, secondsgap * 1000);
+}, null, 1000, secondsgap * 1000);
 
 var endTimer = new Timer((o) =>
 {
-    Console.WriteLine($"Program is exiting after {secondsgap * 60000} seconds");
+    Console.WriteLine($"Program is exiting after {minutes} minutes");
     Environment.Exit(0);
-}, null, secondsgap * 60000, 1000);
+}, null, minutes * 60000, 1000);
 
 Console.Read();
 
